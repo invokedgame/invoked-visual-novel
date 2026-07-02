@@ -10,7 +10,9 @@ This repository contains screenshots, promotional assets, and media resources fo
 
 ## Play Invoked
 
-🎮 Play Online ：https://playinvoked.org/
+🎮 Play Online ：
+https://playinvoked.org/
+https://invokedgame.github.io/invoked-visual-novel/
 
 ---
 
