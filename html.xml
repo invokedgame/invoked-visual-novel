@@ -1,923 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="2u0SJ3_ql6MbNyGTkNsws5WlRT2Lk2M5nXCBqtYtyCo" />
   <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="2u0SJ3_ql6MbNyGTkNsws5WlRT2Lk2M5nXCBqtYtyCo" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Play Invoked Online | Psychological Creepypasta Visual Novel</title>
-  <meta name="description" content="Play Invoked online, a psychological creepypasta visual novel by wormieko with romance, horror, branching routes, and emotional storytelling. Available for Windows, macOS, Android, and online play." />
-  <meta name="keywords" content="Invoked, play Invoked online, Invoked visual novel, Invoked creepypasta, Invoked itch.io, invoked itch io, itch io invoked, itchio invoked, invoked itchio, Invoked juego, Invoked novela visual, Invoked download, creepypasta visual novel, horror romance visual novel" />
-  <link rel="canonical" href="https://playinvoked.org/" />
-
-  <meta property="og:title" content="Play Invoked Online | Psychological Creepypasta Visual Novel" />
-  <meta property="og:description" content="Experience Invoked, a creepypasta-inspired visual novel with romance, horror, branching choices, and multiple story routes." />
-  <meta property="og:image" content="./CCCdbP.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://playinvoked.org/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Play Invoked Online" />
-  <meta name="twitter:description" content="A psychological creepypasta visual novel with romance, horror, and branching routes." />
-  <meta name="twitter:image" content="./CCCdbP.jpg" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoGame",
-    "name": "Invoked",
-    "url": "https://playinvoked.org/",
-    "image": "https://playinvoked.org/CCCdbP.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "wormieko"
-    },
-    "genre": ["Visual Novel", "Creepypasta", "Horror", "Romance"],
-    "gamePlatform": ["Windows", "macOS", "Android", "Browser"],
-    "applicationCategory": "Game",
-    "operatingSystem": ["Windows", "macOS", "Android"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "39",
-      "bestRating": "5"
-    },
-    "description": "Invoked is a psychological creepypasta-inspired visual novel featuring romance, horror, branching routes, and emotional storytelling."
-  }
-  </script>
+  <title>Play Invoked Online Free | Creepypasta Visual Novel Game</title>
+  <meta name="description" content="Play Invoked online free. A psychological creepypasta visual novel game featuring romance, horror, branching story routes, and emotional choices. Available on Windows, macOS, Android, and browser." />
+  <meta name="keywords" content="Invoked, play Invoked online, Invoked visual novel, Invoked creepypasta, Invoked itch.io, invoked itch io, itch io invoked, itchio invoked, invoked itchio, Invoked juego, Invoked novela visual, Invoked download" />
 
   <style>
-    :root {
-      --bg: #08060b;
-      --bg2: #120c18;
-      --text: #fff7ff;
-      --muted: #d8c7df;
-      --soft: rgba(255, 255, 255, 0.08);
-      --soft2: rgba(255, 255, 255, 0.13);
-      --border: rgba(255, 255, 255, 0.18);
-      --pink: #ff4fa3;
-      --violet: #8b5cf6;
-      --cyan: #67e8f9;
-      --radius: 24px;
-      --shadow: 0 30px 90px rgba(0, 0, 0, 0.48);
-    }
-
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 10% 0%, rgba(255, 79, 163, 0.20), transparent 32%),
-        radial-gradient(circle at 90% 10%, rgba(139, 92, 246, 0.22), transparent 34%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1120px, calc(100% - 36px));
-      margin: 0 auto;
+      font-family: Inter, Arial, sans-serif;
+      color: #fff;
+      background: #08060b;
     }
 
     .hero {
       min-height: 100vh;
-      position: relative;
       display: flex;
       align-items: center;
-      overflow: hidden;
+      justify-content: center;
+      text-align: center;
+      padding: 32px;
       background:
-        linear-gradient(90deg, rgba(8, 6, 11, 0.92) 0%, rgba(8, 6, 11, 0.75) 46%, rgba(8, 6, 11, 0.35) 100%),
+        linear-gradient(rgba(8, 6, 11, 0.72), rgba(8, 6, 11, 0.88)),
         url("./CCCdbP.jpg") center / cover no-repeat;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 25% 35%, rgba(255, 79, 163, 0.22), transparent 28%),
-        radial-gradient(circle at 70% 20%, rgba(139, 92, 246, 0.18), transparent 30%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 180px;
-      background: linear-gradient(180deg, transparent, var(--bg));
-      pointer-events: none;
-    }
-
     .hero-card {
-      position: relative;
-      z-index: 2;
-      max-width: 780px;
-      padding: 42px;
-      border: 1px solid var(--border);
-      border-radius: 34px;
-      background: rgba(10, 7, 14, 0.58);
-      backdrop-filter: blur(20px);
-      box-shadow: var(--shadow);
+      max-width: 880px;
+      padding: 48px 34px;
+      border-radius: 32px;
+      background: rgba(0, 0, 0, 0.46);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
     }
 
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      display: inline-block;
+      margin-bottom: 18px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid var(--border);
-      color: #ffe6f3;
+      background: rgba(255, 255, 255, 0.12);
       font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 20px;
+      font-weight: 700;
+      color: #ffe1f1;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(46px, 9vw, 94px);
+      font-size: clamp(42px, 8vw, 92px);
       line-height: 0.95;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.05em;
     }
 
-    .hero h2 {
-      margin: 20px 0 0;
-      font-size: clamp(24px, 4vw, 42px);
-      line-height: 1.12;
-      letter-spacing: -0.04em;
+    h2 {
+      margin: 22px 0 0;
+      font-size: clamp(22px, 4vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
     }
 
-    .hero p {
-      margin: 20px 0 0;
-      max-width: 700px;
-      color: var(--muted);
+    p {
+      max-width: 720px;
+      margin: 22px auto 0;
       font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.7;
+      color: #e4d3ea;
     }
 
     .rating {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin-top: 24px;
-      color: #ffe9a8;
-      font-weight: 900;
+      margin-top: 22px;
+      font-weight: 800;
+      color: #ffe680;
     }
 
     .rating span {
-      color: var(--muted);
-      font-weight: 700;
+      color: #e4d3ea;
+      font-weight: 600;
     }
 
-    .cta-row {
+    .cta {
+      margin-top: 34px;
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 30px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 56px;
+      min-width: 280px;
+      min-height: 60px;
       padding: 0 28px;
       border-radius: 999px;
+      font-size: 18px;
       font-weight: 900;
-      border: 1px solid transparent;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--pink), var(--violet));
-      color: white;
-      box-shadow: 0 20px 46px rgba(255, 79, 163, 0.32);
+      color: #fff;
+      background: linear-gradient(135deg, #ff4fa3, #8b5cf6);
+      box-shadow: 0 20px 48px rgba(255, 79, 163, 0.38);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.10);
-      border-color: var(--border);
-      color: white;
-    }
-
-    section {
-      padding: 78px 0;
-    }
-
-    .section-title {
-      margin-bottom: 30px;
-    }
-
-    .section-title h2 {
-      margin: 0;
-      font-size: clamp(30px, 5vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -0.045em;
-    }
-
-    .section-title p {
-      margin: 14px 0 0;
-      max-width: 780px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--soft2), var(--soft));
-      padding: 24px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(14px);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      letter-spacing: -0.02em;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .preview {
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.06);
-      box-shadow: var(--shadow);
-    }
-
-    .preview img {
-      width: 100%;
-      max-height: 620px;
-      object-fit: cover;
-    }
-
-    .info-list {
-      display: grid;
-      gap: 0;
-    }
-
-    .info-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.11);
-    }
-
-    .info-row:last-child {
-      border-bottom: none;
-    }
-
-    .info-row strong {
       color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
     }
 
-    .info-row span {
-      color: var(--muted);
-      text-align: right;
+    .btn:hover {
+      transform: translateY(-3px);
     }
 
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .tag {
-      display: inline-flex;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid var(--border);
+    .platforms {
+      margin-top: 20px;
       font-size: 14px;
-      font-weight: 800;
-      color: #ffe7f3;
+      color: #d9c7e6;
     }
 
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, rgba(255, 79, 163, 0.34), rgba(139, 92, 246, 0.32));
-      margin-bottom: 14px;
-      font-size: 23px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-
-    .gallery a {
-      min-height: 230px;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .gallery a:nth-child(1) {
-      grid-column: span 7;
-      min-height: 410px;
-    }
-
-    .gallery a:nth-child(2) {
-      grid-column: span 5;
-      min-height: 410px;
-    }
-
-    .gallery a:nth-child(3),
-    .gallery a:nth-child(4),
-    .gallery a:nth-child(5) {
-      grid-column: span 4;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.28s ease;
-    }
-
-    .gallery a:hover img {
-      transform: scale(1.04);
-    }
-
-    .download-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 20px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.075);
-    }
-
-    .download-item h3 {
-      margin: 0 0 4px;
-      font-size: 22px;
-    }
-
-    .download-item p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    blockquote {
-      margin: 0;
-      padding: 24px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff0f8;
-      font-size: 17px;
-    }
-
-    .faq {
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.07);
-      padding: 10px 28px;
-    }
-
-    .faq-item {
-      padding: 22px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .faq-item:last-child {
-      border-bottom: none;
-    }
-
-    .faq-item h3 {
-      margin: 0 0 8px;
-      font-size: 21px;
-    }
-
-    .faq-item p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .final-cta {
-      text-align: center;
-      background:
-        radial-gradient(circle at center, rgba(255, 79, 163, 0.22), transparent 42%),
-        rgba(255, 255, 255, 0.025);
-    }
-
-    .final-cta h2 {
-      margin: 0;
-      font-size: clamp(34px, 6vw, 64px);
-      line-height: 1.05;
-      letter-spacing: -0.05em;
-    }
-
-    .final-cta p {
-      margin: 16px auto 0;
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    footer {
-      padding: 36px 0;
-      text-align: center;
-      color: var(--muted);
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #ffe0f0;
-      font-weight: 900;
-    }
-
-    @media (max-width: 820px) {
+    @media (max-width: 640px) {
       .hero {
-        background:
-          linear-gradient(180deg, rgba(8, 6, 11, 0.82), rgba(8, 6, 11, 0.96)),
-          url("./CCCdbP.jpg") center / cover no-repeat;
+        padding: 20px;
       }
 
       .hero-card {
-        padding: 26px;
-        border-radius: 26px;
+        padding: 34px 22px;
       }
 
-      .grid-2,
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .info-row {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .info-row span {
-        text-align: left;
-      }
-
-      .download-item {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery a,
-      .gallery a:nth-child(1),
-      .gallery a:nth-child(2),
-      .gallery a:nth-child(3),
-      .gallery a:nth-child(4),
-      .gallery a:nth-child(5) {
-        grid-column: span 1;
-        min-height: 270px;
-      }
-
-      section {
-        padding: 56px 0;
+      .btn {
+        width: 100%;
+        min-width: 0;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <div class="badge">⭐ 4.8/5 · 39 Ratings · by wormieko</div>
+  <main class="hero">
+    <section class="hero-card">
+      <div class="badge">Visual Novel · Creepypasta · Horror · Romance</div>
 
-        <h1>Play Invoked Online</h1>
+      <h1>Play Invoked Online Free</h1>
 
-        <h2>Psychological Creepypasta Visual Novel Game</h2>
+      <h2>A Psychological Creepypasta Visual Novel Game</h2>
 
-        <p>
-          Experience Invoked, a romance and horror visual novel inspired by creepypasta stories. Explore branching routes, emotional choices, and character-driven storytelling online or download the game for Windows, macOS, and Android.
-        </p>
+      <p>
+        Experience Invoked, a romance and horror visual novel inspired by creepypasta stories.
+        Explore branching routes, emotional choices, character-driven storytelling, and multiple endings.
+      </p>
 
-        <div class="rating">
-          ★★★★★ <span>Visual Novel · Creepypasta · Horror · Romance</span>
-        </div>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://playinvoked.org/" target="_blank" rel="noopener">
-            ▶ Play Free on PlayInvoked.org
-          </a>
-          <a class="btn btn-secondary" href="#download">
-            Download Game
-          </a>
-        </div>
+      <div class="rating">
+        ★★★★★ <span>4.8 / 5 · 39 Player Ratings</span>
       </div>
-    </div>
-  </header>
 
-  <main>
-    <section id="preview">
-      <div class="container">
-        <div class="section-title">
-          <h2>Invoked Visual Novel Preview</h2>
-          <p>
-            Invoked is a psychological visual novel available through itch.io and PlayInvoked.org. This page highlights the game artwork, download information, supported platforms, player rating, and gameplay details.
-          </p>
-        </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://playinvoked.org/" target="_blank" rel="noopener">
+          ▶ Play Free Now
+        </a>
 
-        <div class="preview">
-          <img src="./CCCdbP.jpg" alt="Invoked psychological creepypasta visual novel cover artwork" />
-        </div>
+        <a class="btn btn-secondary" href="https://playinvoked.org/" target="_blank" rel="noopener">
+          Download Game
+        </a>
       </div>
-    </section>
 
-    <section id="about">
-      <div class="container grid grid-2">
-        <div>
-          <div class="section-title">
-            <h2>About Invoked</h2>
-            <p>
-              Invoked is a creepypasta-inspired visual novel fangame created by wormieko. It blends romance, horror, psychological tension, branching routes, and multiple endings into a character-focused story experience.
-            </p>
-          </div>
-
-          <p>
-            Players read dialogue, make choices, and follow different character paths. The story is designed for fans of emotional visual novels, creepypasta characters, horror romance games, and indie itch.io visual novel projects.
-          </p>
-
-          <div class="tag-row">
-            <span class="tag">Invoked visual novel</span>
-            <span class="tag">Invoked creepypasta</span>
-            <span class="tag">Invoked itch.io</span>
-            <span class="tag">Invoked juego</span>
-            <span class="tag">Invoked novela visual</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Game Information</h3>
-
-          <div class="info-list">
-            <div class="info-row">
-              <strong>Author</strong>
-              <span>wormieko</span>
-            </div>
-            <div class="info-row">
-              <strong>Genre</strong>
-              <span>Visual Novel</span>
-            </div>
-            <div class="info-row">
-              <strong>Tags</strong>
-              <span>creepypasta, Fangame, Horror, Romance</span>
-            </div>
-            <div class="info-row">
-              <strong>Platforms</strong>
-              <span>Windows, macOS, Android</span>
-            </div>
-            <div class="info-row">
-              <strong>Languages</strong>
-              <span>English, Spanish</span>
-            </div>
-            <div class="info-row">
-              <strong>Rating</strong>
-              <span>4.8 / 5 · 39 total ratings</span>
-            </div>
-            <div class="info-row">
-              <strong>Availability</strong>
-              <span>Play online and download</span>
-            </div>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://playinvoked.org/" target="_blank" rel="noopener">
-              Play Invoked Online
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="why">
-      <div class="container">
-        <div class="section-title">
-          <h2>Why Play Invoked?</h2>
-          <p>
-            Invoked combines the appeal of a romance visual novel with creepypasta horror and psychological storytelling.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="feature-icon">🖤</div>
-            <h3>Creepypasta Atmosphere</h3>
-            <p>
-              Dark character designs and internet-horror inspiration give Invoked a recognizable creepypasta identity.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="feature-icon">💌</div>
-            <h3>Romance & Character Routes</h3>
-            <p>
-              Follow character-focused paths with emotional dialogue, relationship choices, and route-based storytelling.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="feature-icon">🔀</div>
-            <h3>Branching Choices</h3>
-            <p>
-              Your decisions influence the story direction, outcomes, and multiple endings.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="feature-icon">🎭</div>
-            <h3>Visual Novel Storytelling</h3>
-            <p>
-              Read, choose, replay, and discover hidden details across routes and endings.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="feature-icon">🌍</div>
-            <h3>English & Spanish</h3>
-            <p>
-              Invoked supports English and Spanish, making it easier for both visual novel and novela visual players.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="feature-icon">📱</div>
-            <h3>PC, Mac & Android</h3>
-            <p>
-              Play Invoked on Windows, macOS, Android, or online through PlayInvoked.org.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <div class="container">
-        <div class="section-title">
-          <h2>Invoked Screenshots & Artwork</h2>
-          <p>
-            Browse Invoked artwork, character visuals, and gameplay screenshots from this psychological creepypasta visual novel.
-          </p>
-        </div>
-
-        <div class="gallery">
-          <a href="./CCCdbP.jpg" target="_blank" rel="noopener">
-            <img src="./CCCdbP.jpg" alt="Invoked visual novel cover artwork with creepypasta atmosphere" />
-          </a>
-
-          <a href="./KPLNZP.png" target="_blank" rel="noopener">
-            <img src="./KPLNZP.png" alt="Invoked character artwork from the creepypasta visual novel game" />
-          </a>
-
-          <a href="./diqQ0D.jpg" target="_blank" rel="noopener">
-            <img src="./diqQ0D.jpg" alt="Invoked horror romance visual novel screenshot" />
-          </a>
-
-          <a href="./screenshot-20260702-151933.png" target="_blank" rel="noopener">
-            <img src="./screenshot-20260702-151933.png" alt="Invoked gameplay screenshot visual novel interface" />
-          </a>
-
-          <a href="./screenshot-20260702-152011.png" target="_blank" rel="noopener">
-            <img src="./screenshot-20260702-152011.png" alt="Invoked itch.io visual novel game interface screenshot" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="download">
-      <div class="container">
-        <div class="section-title">
-          <h2>Download Invoked</h2>
-          <p>
-            Download Invoked for Windows, macOS, or Android. Use PlayInvoked.org for the latest version and online play.
-          </p>
-        </div>
-
-        <div class="grid">
-          <div class="download-item">
-            <div>
-              <h3>Windows</h3>
-              <p>INVOKEDv2-1.1-pc.zip · 353 MB</p>
-            </div>
-            <a class="btn btn-secondary" href="https://playinvoked.org/" target="_blank" rel="noopener">
-              Download PC
-            </a>
-          </div>
-
-          <div class="download-item">
-            <div>
-              <h3>macOS</h3>
-              <p>INVOKEDv2-1.1-mac.zip · 348 MB</p>
-            </div>
-            <a class="btn btn-secondary" href="https://playinvoked.org/" target="_blank" rel="noopener">
-              Download Mac
-            </a>
-          </div>
-
-          <div class="download-item">
-            <div>
-              <h3>Android</h3>
-              <p>com.android.invoked-1.1-1781110052-release.apk · 362 MB</p>
-            </div>
-            <a class="btn btn-secondary" href="https://playinvoked.org/" target="_blank" rel="noopener">
-              Download APK
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="who">
-      <div class="container grid grid-2">
-        <div class="card">
-          <h2>Who Will Enjoy This Game?</h2>
-          <p>
-            Invoked is ideal for visual novel fans, creepypasta fans, romance horror players, fangame communities, and itch.io indie game players looking for an emotional story with dark character routes.
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>Gameplay Tips for Invoked</h2>
-          <p>
-            Read dialogue carefully, replay different choices, follow character behavior, and explore multiple routes. Some paths lean into romance while others focus on psychological tension and horror.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews">
-      <div class="container">
-        <div class="section-title">
-          <h2>Player Reactions</h2>
-          <p>
-            Players often praise Invoked for its artwork, emotional storytelling, creepypasta-inspired characters, and easy-to-understand visual novel system.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <blockquote>
-            “The illustrations are beautiful, the system is simple, and the story quickly pulls you in.”
-          </blockquote>
-
-          <blockquote>
-            “The art style looks amazing. I need to wait to play because I don't understand Spanish.”
-          </blockquote>
-
-          <blockquote>
-            “I loved it. The darker creepypasta personalities and character designs are beautiful.”
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-title">
-          <h2>Invoked FAQ</h2>
-          <p>
-            Common questions about Invoked, itch.io, download options, platforms, language support, and gameplay.
-          </p>
-        </div>
-
-        <div class="faq">
-          <div class="faq-item">
-            <h3>What is Invoked?</h3>
-            <p>
-              Invoked is a psychological creepypasta-inspired visual novel fangame with romance, horror, branching routes, and emotional storytelling.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Can I play Invoked online?</h3>
-            <p>
-              Yes. You can play Invoked online through PlayInvoked.org.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Is Invoked on itch.io?</h3>
-            <p>
-              Yes. Many players search for invoked itch.io, invoked itch io, itchio invoked, itch io invoked, or invoked itchio when looking for the game.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Who created Invoked?</h3>
-            <p>
-              Invoked was created by wormieko.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>What platforms does Invoked support?</h3>
-            <p>
-              Invoked supports Windows, macOS, and Android. It can also be played online.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>What languages does Invoked support?</h3>
-            <p>
-              Invoked supports English and Spanish. Spanish-speaking players may search for Invoked juego or Invoked novela visual.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>What genre is Invoked?</h3>
-            <p>
-              Invoked is a visual novel with creepypasta, fangame, horror, and romance tags.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>What is the rating of Invoked?</h3>
-            <p>
-              Invoked is rated 4.8 out of 5 stars based on 39 total ratings.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="container">
-        <h2>Ready to Play Invoked Online?</h2>
-        <p>
-          Enter a psychological creepypasta visual novel filled with romance, horror, branching choices, and emotional routes.
-        </p>
-
-        <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-primary" href="https://playinvoked.org/" target="_blank" rel="noopener">
-            ▶ Play Free on PlayInvoked.org
-          </a>
-          <a class="btn btn-secondary" href="#gallery">
-            View Screenshots
-          </a>
-        </div>
+      <div class="platforms">
+        Windows · macOS · Android · Browser
       </div>
     </section>
   </main>
-
-  <footer>
-    <div class="container">
-      Invoked visual novel resource page · Creepypasta · Horror · Romance · Fangame ·
-      <a href="https://playinvoked.org/" target="_blank" rel="noopener">Play Invoked Online</a>
-    </div>
-  </footer>
 </body>
 </html>
